@@ -116,12 +116,12 @@ namespace CatalogAPI
                 });
             }
             
-            app.UseFileServer(new FileServerOptions()
-            {
-                RequestPath="/images",
-                FileProvider=new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "Images")),
-                EnableDirectoryBrowsing=true
-            });
+            //app.UseFileServer(new FileServerOptions()
+            //{
+            //    RequestPath="/images",
+            //    FileProvider=new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "Images")),
+            //    EnableDirectoryBrowsing=true
+            //});
 
             app.UseAuthentication();
 

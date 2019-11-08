@@ -37,6 +37,11 @@ namespace CatalogAPI.Controllers
             return result.ToList();
         }
 
+        public ActionResult<string> APIName()
+        {
+           
+            return "Hello this is CatalogAPI";
+        }
         [AllowAnonymous]
         [HttpGet("{id}", Name = "FindById")]
         [ProducesResponseType((int)HttpStatusCode.OK)]

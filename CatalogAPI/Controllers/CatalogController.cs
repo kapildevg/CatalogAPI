@@ -36,12 +36,7 @@ namespace CatalogAPI.Controllers
             var result= await this.db.Catalog.FindAsync<CatalogItem>(FilterDefinition<CatalogItem>.Empty);
             return result.ToList();
         }
-        [HttpGet("", Name = "APIName")]
-        public ActionResult<string> APIName()
-        {
-           
-            return "Hello this is CatalogAPI";
-        }
+
         [AllowAnonymous]
         [HttpGet("{id}", Name = "FindById")]
         [ProducesResponseType((int)HttpStatusCode.OK)]

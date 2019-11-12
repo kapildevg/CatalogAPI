@@ -58,22 +58,22 @@ namespace CatalogAPI.Controllers
         }
 
         //[Authorize(Roles ="admin")]
-        [HttpPost("", Name ="AddProduct")]
-        [ProducesResponseType((int)HttpStatusCode.Created)]
-        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        public ActionResult<CatalogItem> AddProduct(CatalogItem item)
-        {
-            TryValidateModel(item);
-            if (ModelState.IsValid)
-            {
-                this.db.Catalog.InsertOne(item);
-                return Created("", item); // status code 201
-            }
-            else
-            {
-                return BadRequest(ModelState); //status code 400
-            }
-        }
+        // [HttpPost("", Name ="AddProduct")]
+        // [ProducesResponseType((int)HttpStatusCode.Created)]
+        // [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        // public ActionResult<CatalogItem> AddProduct(CatalogItem item)
+        // {
+        //     TryValidateModel(item);
+        //     if (ModelState.IsValid)
+        //     {
+        //         this.db.Catalog.InsertOne(item);
+        //         return Created("", item); // status code 201
+        //     }
+        //     else
+        //     {
+        //         return BadRequest(ModelState); //status code 400
+        //     }
+        // }
 
         //[Authorize(Roles ="admin")]
         [HttpPost("product")]
